@@ -32,8 +32,10 @@ AutoMouser is a small programm that randomly moves the mouse cursor on the scree
 4. Run the script
 
     ```bash
-    python3 automouser.py
+    .venv/bin/python3 automouser.py
     ```
+
+    > On Windows, run .venv\Scripts\python.exe automouser.py
 
 ## Usage
 
