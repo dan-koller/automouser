@@ -8,6 +8,7 @@ from random import randint
 stop_event = threading.Event()
 
 
+# TODO: Exiting takes a while, need to find a way to exit immediately
 def listen_for_stop_event():
     """Function to continuously monitor mouse position."""
     while not stop_event.is_set():
@@ -23,7 +24,7 @@ def listen_for_stop_event():
         sleep(0.1)
 
 
-def move_mouse_randomly():
+def move_mouse_randomly(time_to_wait = 30):
     """Function to randomly move the mouse around the screen."""
     while not stop_event.is_set():
         width, height = pyautogui.size()
@@ -39,17 +40,18 @@ def move_mouse_randomly():
         # Print the mouse position for debugging purposes
         print(f"Moved to ({x}, {y}) at {datetime.now()}")
 
-        # Wait before moving again (in seconds)
-        time_to_wait = randint(4, 10)
         sleep(time_to_wait)
 
 
 def main():
+    # Prompt the user for the time interval to wait before moving the mouse (default is 30 seconds)
+    time_to_wait = int(input("Enter the time interval to wait before moving the mouse (in seconds) [default=30]: ") or 30)
+
     # Create and start the thread for the stop event listener
     stop_thread = threading.Thread(target=listen_for_stop_event, daemon=True)
     stop_thread.start()
 
-    move_mouse_randomly()
+    move_mouse_randomly(time_to_wait)
 
     stop_thread.join()
 
