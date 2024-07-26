@@ -20,7 +20,7 @@ Here are some oneliners for getting started quickly:
 -   Windows
 
     ```cmd
-    git clone https://github.com/dan-koller/automouser && cd automouser && python3 -m venv .venv && .venv\Scripts\activate.bat && pip3 install -r requirements.txt && .venv\Scripts\python.exe automouser.py
+    git clone https://github.com/dan-koller/automouser && cd automouser && python -m venv .venv && .venv\Scripts\activate.bat && pip install -r requirements.txt && .venv\Scripts\python.exe automouser.py
     ```
 
 Once started, enter the delay in seconds between each mouse movement. The default is 60 seconds.
