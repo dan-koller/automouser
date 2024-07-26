@@ -57,7 +57,7 @@ Once started, enter the delay in seconds between each mouse movement. The defaul
 
 ## Usage
 
-The script will start moving the mouse cursor randomly on the screen. To stop the script, move the mouse in any corner of the screen or press `Ctrl + C`.
+The script will start moving the mouse cursor randomly on the screen. To stop the script, move the mouse to any edge of the screen or press `Ctrl + C`.
 
 ## License
 
