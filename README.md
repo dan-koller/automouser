@@ -9,6 +9,24 @@ AutoMouser is a small programm that randomly moves the mouse cursor on the scree
 
 ## Get started
 
+Here are some oneliners for getting started quickly:
+
+-   MacOS/Linux
+
+    ```bash
+    git clone https://github.com/dan-koller/automouser && cd automouser && python3 -m venv .venv && source .venv/bin/activate && pip3 install -r requirements.txt && .venv/bin/python3 automouser.py
+    ```
+
+-   Windows
+
+    ```cmd
+    git clone https://github.com/dan-koller/automouser && cd automouser && python3 -m venv .venv && .venv\Scripts\activate.bat && pip3 install -r requirements.txt && .venv\Scripts\python.exe automouser.py
+    ```
+
+Once started, enter the delay in seconds between each mouse movement. The default is 60 seconds.
+
+## Installation
+
 1. Clone the repository
 
     ```bash
@@ -39,7 +57,7 @@ AutoMouser is a small programm that randomly moves the mouse cursor on the scree
 
 ## Usage
 
-The script will start moving the mouse cursor randomly on the screen. To stop the script, move the mouse to the top left corner of the screen or press `Ctrl + C`.
+The script will start moving the mouse cursor randomly on the screen. To stop the script, move the mouse in any corner of the screen or press `Ctrl + C`.
 
 ## License
 
