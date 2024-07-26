@@ -23,7 +23,7 @@ def listen_for_stop_event():
         sleep(0.1)
 
 
-def move_mouse_randomly(time_to_wait=30):
+def move_mouse_randomly(time_to_wait=60):
     """
     Function to randomly move the mouse around the screen.
 
@@ -43,7 +43,7 @@ def move_mouse_randomly(time_to_wait=30):
 
 
 def main():
-    time_to_wait = int(input("Enter the time interval to wait before moving the mouse (in seconds) [default=30]: ") or 30)
+    time_to_wait = int(input("Enter the time interval to wait before moving the mouse (in seconds) [default=60]: ") or 60)
 
     # Create a separate thread to listen for the stop event
     stop_thread = threading.Thread(target=listen_for_stop_event, daemon=True)
